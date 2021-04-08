@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateLabActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#F94A64"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_scrollFlags="scroll|enterAlways"/>
+
+    <ListView
+        android:id="@+id/list_view_steps"
+        android:layout_width="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_height="590dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+    </ListView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_gravity="bottom">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/create_record_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="TODO"
+            app:borderWidth="0dp"
+            android:backgroundTint="@color/the_one"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.215"
+            app:srcCompat="@drawable/ic_baseline_mic_24" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/create_stop_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:backgroundTint="#FF4C71"
+            app:borderWidth="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/create_record_btn"
+            app:layout_constraintEnd_toStartOf="@+id/create_record_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/create_record_btn"
+            app:srcCompat="@drawable/ic_baseline_close_24" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/create_save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:borderWidth="0dp"
+            android:backgroundTint="@color/the_one"
+            app:layout_constraintBottom_toBottomOf="@+id/create_record_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/create_record_btn"
+            app:layout_constraintTop_toTopOf="@+id/create_record_btn"
+            app:srcCompat="@drawable/ic_baseline_check_24" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
